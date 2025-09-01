@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./assets/gradient.jpg") no-repeat center center/cover;
+}
+
+.container {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.5), rgba(74, 74, 74, 0.3));
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 800px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 25px !important;
+    font-weight: 600;
+}
+
+.document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0s ease;
+}
+
+.document-item:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.doc-name {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #2158f1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+ 
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0s ease-in-out;
+    z-index: 1000;
+}
+
+/* Show the modal */
+.modal.show {
+    transform: translateY(0);
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
